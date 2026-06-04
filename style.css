@@ -352,7 +352,8 @@ h1 {
 }
 
 /* Technology stack display */
-.tech-stack {
+.tech-stack 
+{
   font-size: 1.1rem;
   color: var(--accent-blue);
   margin-bottom: 2rem;
