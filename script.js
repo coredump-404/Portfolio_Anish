@@ -42,13 +42,16 @@ document.querySelectorAll('.nav-link, .btn[href^="#"]').forEach(link => {
   });
 });
 
+let hasAnimatedCounters = false;
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      if (entry.target.id === 'about') {
+      if (entry.target.id === 'about' && !hasAnimatedCounters) {
         animateProgressBars();
         animateCounters();
+        hasAnimatedCounters = true;
       }
     }
   });
